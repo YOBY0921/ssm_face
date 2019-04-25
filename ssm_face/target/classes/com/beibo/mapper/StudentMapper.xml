@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.beibo.mapper.StudentMapper">
+
+
+    <!--<resultMap id="adminMap" type="com.beibo.pojo.IotAdmin">-->
+    <!--<id property="admin_id" column="id"/>-->
+    <!--<result property="admin_name" column="name"/>-->
+    <!--<result property="admin_nickname" column="nickname"/>-->
+    <!--<result property="admin_password" column="password"/>-->
+    <!--<result property="admin_role" column="role"/>-->
+    <!--<result property="admin_status" column="status"/>-->
+    <!--<result property="admin_telephone" column="telephone"/>-->
+    <!--<result property="admin_email" column="email"/>-->
+    <!--<result property="create_time" column="createTime"/>-->
+    <!--<result property="update_time" column="updateTime"/>-->
+    <!--<result property="delete_time" column="deleteTime"/>-->
+    <!--</resultMap>-->
+
+    <select id="queryAll" resultType="com.beibo.pojo.Student">
+        select * from student
+    </select>
+
+
+<!--    <insert id="add">-->
+<!--        insert into iot_admin-->
+
+<!--        <trim prefix="(" suffix=")" prefixOverrides=",">-->
+<!--            <if test="adminName != null and adminName != ''">-->
+<!--                ,admin_name-->
+<!--            </if>-->
+<!--            <if test="adminNickname != null and adminNickname != ''">-->
+<!--                ,admin_nickname-->
+<!--            </if>-->
+<!--            <if test="adminPassword != null and adminPassword != ''">-->
+<!--                ,admin_password-->
+<!--            </if>-->
+<!--            <if test="adminRole != null and adminRole != ''">-->
+<!--                ,admin_role-->
+<!--            </if>-->
+<!--            <if test="adminStatus != null and adminStatus != ''">-->
+<!--                ,admin_status-->
+<!--            </if>-->
+<!--            <if test="adminTelephone != null and adminTelephone != ''">-->
+<!--                ,admin_telephone-->
+<!--            </if>-->
+<!--            <if test="adminEmail != null and adminEmail != ''">-->
+<!--                ,admin_email-->
+<!--            </if>-->
+<!--        </trim>-->
+
+<!--        <trim prefix="values(" suffix=")" prefixOverrides=",">-->
+<!--            <if test="adminName != null and adminName != ''">-->
+<!--                ,#{adminName}-->
+<!--            </if>-->
+<!--            <if test="adminNickname != null and adminNickname != ''">-->
+<!--                ,#{adminNickname}-->
+<!--            </if>-->
+<!--            <if test="adminPassword != null and adminPassword != ''">-->
+<!--                ,#{adminPassword}-->
+<!--            </if>-->
+<!--            <if test="adminRole != null and adminRole != ''">-->
+<!--                ,#{adminRole}-->
+<!--            </if>-->
+<!--            <if test="adminStatus != null and adminStatus != ''">-->
+<!--                ,#{adminStatus}-->
+<!--            </if>-->
+<!--            <if test="adminTelephone != null and adminTelephone != ''">-->
+<!--                ,#{adminTelephone}-->
+<!--            </if>-->
+<!--            <if test="adminEmail != null and adminEmail != ''">-->
+<!--                ,#{adminEmail}-->
+<!--            </if>-->
+<!--        </trim>-->
+
+<!--    </insert>-->
+
+<!--    &lt;!&ndash;admin_name,admin_nickname,admin_role,admin_status,admin_telephone,admin_email&ndash;&gt;-->
+<!--    &lt;!&ndash;按登入账号查询&ndash;&gt;-->
+<!--    <select id="queryByName" resultType="com.beibo.pojo.IotAdmin">-->
+<!--        select * from iot_admin-->
+<!--        <where>-->
+<!--            <if test="adminName != null and adminName != ''">-->
+<!--                and admin_name like concat('%',#{adminName},'%')-->
+<!--            </if>-->
+<!--        </where>-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash;按账号ID进行查询&ndash;&gt;-->
+<!--    <select id="queryById" resultType="com.beibo.pojo.IotAdmin">-->
+<!--        select * from iot_admin-->
+<!--        <where>-->
+<!--            <if test="adminId != null">-->
+<!--                and admin_id = #{adminId}-->
+<!--            </if>-->
+<!--        </where>-->
+<!--    </select>-->
+
+<!--    <update id="update">-->
+<!--        update iot_admin-->
+<!--        <set>-->
+<!--            <if test="adminName != null and adminName != ''">-->
+<!--                admin_name = #{adminName},-->
+<!--            </if>-->
+<!--            <if test="adminNickname != null and adminNickname != ''">-->
+<!--                admin_nickname = #{adminNickname},-->
+<!--            </if>-->
+<!--            <if test="adminRole != null">-->
+<!--                admin_role = #{adminRole},-->
+<!--            </if>-->
+<!--            <if test="adminStatus != null">-->
+<!--                admin_status = #{adminStatus},-->
+<!--            </if>-->
+<!--            <if test="adminTelephone != null and adminTelephone != ''">-->
+<!--                admin_telephone = #{adminTelephone},-->
+<!--            </if>-->
+<!--            <if test="adminEmail != null and adminEmail != ''">-->
+<!--                admin_email = #{adminEmail},-->
+<!--            </if>-->
+<!--        </set>-->
+
+<!--        <where>-->
+<!--            <if test="adminId != null">-->
+<!--                and admin_id = #{adminId}-->
+<!--            </if>-->
+<!--        </where>-->
+<!--    </update>-->
+
+<!--    &lt;!&ndash;删除用户&ndash;&gt;-->
+<!--    <delete id="delete">-->
+<!--        delete from iot_admin where admin_id = #{adminId}-->
+<!--    </delete>-->
+
+</mapper>
